@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./static/css/post_list.css"/>
+    <title>of</title>
+</head>
+<body>
+<div id="wrap">
+    <header>
+        <h1>Eirene</h1>
+    </header>
+
+    <div id="container">
+        <nav>
+            {% block content %}
+            {% endblock %}
+        </nav>
+    </div>
+    <footer>
+        <div id="mini_footer">
+            <a>Address : </a><br/>
+            <a>Tel : </a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

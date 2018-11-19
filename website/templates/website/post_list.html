@@ -1,28 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./static/css/post_list.css"/>
-    <title>Console</title>
-</head>
-<body>
-    <div id="wrap">
-        <header>
-            <h1>Eirene</h1>
-        </header>
-        {% for posts in posts %}
-        <<div id="container">
-            <p>published : {{ posts.published_date }}</p>
-            <p><a href="">{{ posts.title }}</a></p>
-            <p>{{ post.text|linebreaksbr }}</p>
-        </div>
-        {% endfor %}
-        <footer>
-            <div id="mini_footer">
-                <a>Address : </a><br/>
-                <a>Tel : </a>
-            </div>
-        </footer>
-    </div>
-</body>
-</html>
+{% extends 'website/of.html' %}
+
+{% block content %}
+    {% for post in posts %}
+    <table>
+        <tr>
+            <td>
+                <p><a href="{% url 'post_detail' pk=post.pk %}">{{ posts.title }}</a></p>
+                <p>{{ post.text|truncatewords:"20" }}</p>
+                <p>published : {{ posts.published_date }}</p>
+            </td>
+        </tr>
+    </table>
+    {% endfor %}
+{% endblock %}
