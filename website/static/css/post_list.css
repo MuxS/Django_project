@@ -6,34 +6,72 @@ html, body {
 #wrap {
     width: 100%;
     height: 1200px;
+    background-color: #000;
     margin: 0 auto;
-    background-color: #B978F7;
-    padding-top: 4%;
 }
 header {
-    width: 80%;
-    height: 10%;
+    width: 100%;
+    height: 15%;
     margin: 0 auto;
-    background-color: #D9B5FB;
-    border-radius: 10px;
+}
+#drop_down {
+    width: 450px;
+    height: 50px;
+    border: 1px solid white;
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+ul {
+    width: 100%;
+    height: 50px;
+}
+ul > li {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    color: white;
+    list-style: none;
+    text-align: center;
+}
+ul > li > ul {
+    width: 150px;
+    height: 150px;
+}
+ul > li > ul > li {
+    width: 100%;
+    height: 0px;
+}
+ul > li:hover > ul > li {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #FFFFFF;
+    border-top: none;
+    transition: all 0.3s;
+}
+#main_name {
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
 }
 h1 {
+    clear: both;
     text-align: center;
+    color: white;
     font-size: 50px;
 }
 #container {
-    width: 80%;
+    width: 100%;
     height: 70%;
     margin: 0 auto;
-    background-color: #E9DCF5;
     border-radius: 10px;
 }
-nav {
-    width: 80%;
-    height: 80%;
-    margin: 0 auto;
-    background-color: #FFFFFF;
-    border-radius: 10px;
+img {
+    width: 33%;
+    height: 380px;
 }
 table {
     width: 80%;

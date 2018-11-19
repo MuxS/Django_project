@@ -1,4 +1,4 @@
-{% load static %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +9,42 @@
 <body>
 <div id="wrap">
     <header>
-        <h1>Eirene</h1>
+        <div id="drop_down">
+            <ul id="f_ul">
+                <li>J-US Worship
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Markers Worship
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Anointing
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="main_name">
+            <h1>Eirene</h1>
+        </div>
     </header>
 
     <div id="container">
-        <nav>
+        <img src="{% static 'img/jus1.jpg' %}" alt="j-us"/>
+        <img src="{% static 'img/markers1.jpg' %}" alt="markers"/>
+        <img src="{% static 'img/anointing1.jpg' %}" alt="anointing"/>
             {% block content %}
             {% endblock %}
-        </nav>
     </div>
     <footer>
         <div id="mini_footer">
