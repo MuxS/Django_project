@@ -10,9 +10,13 @@
         <header>
             <h1>Eirene</h1>
         </header>
+        {% for posts in posts %}
         <<div id="container">
-
+            <p>published : {{ posts.published_date }}</p>
+            <p><a href="">{{ posts.title }}</a></p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
+        {% endfor %}
         <footer>
             <div id="mini_footer">
                 <a>Address : </a><br/>
