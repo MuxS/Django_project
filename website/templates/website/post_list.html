@@ -6,8 +6,8 @@
         <tr>
             <td>
                 <p><a href="{% url 'post_detail' pk=post.pk %}">{{ posts.title }}</a></p>
-                <p>{{ post.text|truncatewords:"20" }}</p>
-                <p>published : {{ posts.published_date }}</p>
+                <p>{{ post.text|truncatewords:"10" }}</p>
+                <p>published : {{ post.published_date }}</p>
             </td>
         </tr>
     </table>
