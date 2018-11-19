@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./static/css/post_list.css"/>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="{% static 'js/main.js' %}"></script>
     <title>of</title>
 </head>
 <body>
@@ -11,25 +16,28 @@
     <header>
         <div id="drop_down">
             <ul id="f_ul">
-                <li>J-US Worship
+                <li>
+                    <a href="#" class="d_click">J-US Worship</a>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
                     </ul>
                 </li>
-                <li>Markers Worship
+                <li>
+                    <a href="#" class="d_click">Markers Worship</a>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
                     </ul>
                 </li>
-                <li>Anointing
+                <li>
+                    <a href="#" class="d_click">Anointing</a>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
                     </ul>
                 </li>
             </ul>
@@ -43,8 +51,8 @@
         <img src="{% static 'img/jus1.jpg' %}" alt="j-us"/>
         <img src="{% static 'img/markers1.jpg' %}" alt="markers"/>
         <img src="{% static 'img/anointing1.jpg' %}" alt="anointing"/>
-            {% block content %}
-            {% endblock %}
+        {% block content %}
+        {% endblock %}
     </div>
     <footer>
         <div id="mini_footer">
