@@ -1,15 +1,29 @@
 {% extends 'website/Eirene.html' %}
 
 {% block content %}
-    {% for post in posts %}
     <table>
+        <colgroup>
+            <col width="5%"/>
+            <col width="20%"/>
+            <col width="10%"/>
+        </colgroup>
+        <tr>
+            <th>제목</th>
+            <th>내용</th>
+            <th>날짜</th>
+        </tr>
+        {% for post in posts %}
         <tr>
             <td>
-                <p><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p>
-                <p>{{ post.text|truncatewords:"10" }}</p>
-                <p>published : {{ post.published_date }}</p>
+                <p><a href="{% url 'post_detail' pk=post.pk %}" class="none_deco">{{ post.title }}</a></p>
+            </td>
+            <td>
+                <p>{{ post.text|truncatewords:"5" }}</p>
+            </td>
+            <td>
+                <p>{{ post.published_date }}</p>
             </td>
         </tr>
+        {% endfor %}
     </table>
-    {% endfor %}
 {% endblock %}
