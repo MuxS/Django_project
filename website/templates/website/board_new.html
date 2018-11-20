@@ -1,0 +1,10 @@
+{% extends 'website/Eirene.html' %}
+
+{% block content %}
+    <h1>새로운 게시글</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="글쓰기"/>
+    </form>
+{% endblock %}

@@ -12,8 +12,10 @@ $(document).ready(function () {
             $('img').fadeToggle(700);
             if (sw == -1) {
                 setTimeout(function () {
-                    $('#hide').css('background-color', '#FFFFFF');
                     $('#hide').animate({top: '13%'}, 1000);
+                    setTimeout(function () {
+                        $('#hide').css('background-color', '#FFFFFF');
+                    }, 1000);
                     sw *= -1;
                 }, 700);
             } else {

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/css/index.css"/>
+    <link rel="stylesheet" href="/static/css/Eirene.css"/>
     <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -13,7 +13,7 @@
 </head>
 <body>
 <div id="hide">
-</div>
+</div>pyt
 <div id="wrap">
     <header>
         <div id="drop_down">
@@ -44,13 +44,12 @@
                 </li>
             </ul>
         </div>
-        <h1>Eirene</h1>
+        <h1><a href="{% url 'boards' %}" id="main_tag">Eirene</a></h1>
     </header>
     <div id="container">
         <nav id="img_nav">
-            <img src="{% static 'img/jus1.jpg' %}" alt="j-us"/>
-            <img src="{% static 'img/markers1.jpg' %}" alt="markers"/>
-            <img src="{% static 'img/anointing1.jpg' %}" alt="anointing"/>
+            {% block img %}
+            {% endblock %}
         </nav>
         <div id="content">
             <section>

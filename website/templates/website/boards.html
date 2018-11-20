@@ -1,0 +1,38 @@
+{% extends 'website/Eirene.html' %}
+{% load staticfiles %}
+
+{% block img %}
+        <img src="{% static 'img/jus1.jpg' %}" alt="j-us"/>
+        <img src="{% static 'img/markers1.jpg' %}" alt="markers"/>
+        <img src="{% static 'img/anointing1.jpg' %}" alt="anointing"/>
+{% endblock %}
+
+{% block content %}
+
+    <table>
+        <colgroup>
+            <col width="5%"/>
+            <col width="20%"/>
+            <col width="10%"/>
+        </colgroup>
+        <tr>
+            <th>제목</th>
+            <th>내용</th>
+            <th>날짜</th>
+        </tr>
+        {% for post in posts %}
+        <tr>
+            <td>
+                <p><a href="{% url 'contents' pk=post.pk %}" class="none_deco">{{ post.title }}</a></p>
+            </td>
+            <td>
+                <p><a href="{% url 'contents' pk=post.pk %}" class="none_deco">{{ post.text|truncatewords:"5" }}</a></p>
+            </td>
+            <td>
+                <p>{{ post.published_date }}</p>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'board_new' %}"><input type="button" value="글쓰기" id="new_button"/></a>
+{% endblock %}
