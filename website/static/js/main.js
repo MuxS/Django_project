@@ -1,12 +1,13 @@
 var sw = -1;
 $(document).ready(function () {
-
+    var Width = $(window).width();
+/*
+    $('#wrap').ready(function () {
+        $('#wrap').css('width', Width);
+    })
+*/
     var size = $('#wrap').innerWidth();
-    var getSize = size / 3;
-
-    $('img').ready(function () {
-       $('img').css('width', getSize);
-    });
+    var getHeight = $('img').height();
 
     $('#hide').click(function () {
             $('img').fadeToggle(700);
